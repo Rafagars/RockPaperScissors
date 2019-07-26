@@ -21,7 +21,6 @@ function computerPlay(){
 
 };
 
-const computerSelection = computerPlay();
 
 let playerSelection = '';
 
@@ -34,7 +33,7 @@ btnRock.addEventListener('click', () => {
 
 	const p = document.createElement('p');
 
-	p.textContent = playRound(playerSelection, computerSelection);
+	p.textContent = playRound(playerSelection, computerPlay());
 
 	result.appendChild(p);
 
@@ -47,7 +46,7 @@ btnPaper.addEventListener('click', () => {
 
 	const p = document.createElement('p');
 
-	p.textContent = playRound(playerSelection, computerSelection);
+	p.textContent = playRound(playerSelection, computerPlay());
 
 	result.appendChild(p);
 })
@@ -59,7 +58,7 @@ btnScissors.addEventListener('click', () => {
 
 	const p = document.createElement('p');
 
-	p.textContent = playRound(playerSelection, computerSelection);
+	p.textContent = playRound(playerSelection, computerPlay());
 
 	result.appendChild(p);
 
