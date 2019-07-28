@@ -38,7 +38,7 @@ const p = document.createElement('p');
 
 result.appendChild(p);
 
-const Winner = document.createElement('h3');
+const winner = document.createElement('h3');
 
 result.appendChild(Winner)
 ////////////////////////////////////////////////////////////////////////////
@@ -52,10 +52,10 @@ function computerPlay(){
 	if(choice===0){
 		return 'rock';
 	}
-	else if (choice===1) {
+	else if (choice===1){
 		return 'paper';
 	}
-	else if (choice===2) {
+	else if (choice===2){
 		return 'scissors';
 	}
 	else{
@@ -100,9 +100,9 @@ btnScissors.addEventListener('click', () => {
 
 }); 
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection){
 	
-	if (playerSelection === computerSelection) {
+	if (playerSelection === computerSelection){
 		return("It's a tie! Player choose: " + playerSelection + ' and Computer choose: ' + computerSelection);
 	}
 	else if ( (playerSelection === 'rock' && computerSelection === 'scissors') || 
@@ -123,20 +123,23 @@ function playRound(playerSelection, computerSelection) {
 
 function checkForWinner(){
 
-	if (playerScore >= 5) {
+	if (playerScore >= 5){
 
-	 	Winner.textContent = "Player Wins!";
+	 	winner.textContent = "Player Wins!";
 
 	 	//Restart score
 	 	playerScore = 0;
 	 	computerScore = 0;
 	 } 
-	 else if (computerScore >= 5) {
+	 else if (computerScore >= 5){
 
-	 	Winner.textContent = "Computer Wins!"
+	 	winner.textContent = "Computer Wins!"
 
 	 	//Restart score
 	 	computerScore = 0;
 	 	playerScore = 0;
+	 }
+	 else{
+	 	winner.textContent = " ";
 	 }
 };
