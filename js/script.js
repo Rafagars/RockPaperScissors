@@ -40,7 +40,7 @@ result.appendChild(p);
 
 const winner = document.createElement('h3');
 
-result.appendChild(Winner)
+result.appendChild(winner)
 ////////////////////////////////////////////////////////////////////////////
 
 //Game Logic
